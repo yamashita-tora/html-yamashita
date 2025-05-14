@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M ようこそマクドナルドへ M</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <img src="img/m.png" alt="M" width="50" height="50">
+            <hr>
+        </header>
+    </div>
+    <h1>ハンバーガーの略称を答えてね！！</h1>
+
+    <div class="quiz">
+        <img src="img/20241016-00851978-lmaga-000-7-view.jpg" alt="dcb">
+        <form onsubmit="return quizform()" method="post">
+            <label for="ans">
+                <h1>スタッフ間でやり取りされている<br><b>このバーガーの略称は？</b>
+                </h1>
+            </label>
+            <select name="ans" id="ans" class="form-control">
+                <option value="">選択してください</option>
+                <option value="ダブ">ダブ</option>
+                <option value="ダブル">ダブル</option>
+                <option value="ダッチ">ダッチ</option>
+                <option value="ダブチ">ダブチ</option>
+                <option value="ダボー">ダボー</option>
+                <option value="チーチー">チーチー</option>
+                <option value="チーダブ">チーダブ</option>
+                <option value="チーギュー">チーギュー</option>
+
+
+            </select>
+            <br>
+            <button type="submit">送信する</button>
+
+        </form>
+    </div>
+
+
+
+
+
+    <script>
+        function quizform() {
+            // 問題の回答を受け取るメソッドgetElementByid
+            var a = document.getElementById("ans").value;
+            if (a === "ダブチ") {
+                window.location.href = "practice2.html";
+                // return true;
+            } else {
+                window.location.href = "false.html";
+            }
+            return false;
+        }
+    </script>
+</body>
+
+</html>

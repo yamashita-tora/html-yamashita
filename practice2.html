@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M ようこそマクドナルドへ M</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/earlyaccess/nicomoji.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <img src="img/m.png" alt="M" width="50" height="50">
+            <hr>
+        </header>
+    </div>
+    <h1>正解だよ！次の問題・・・・・・</h1>
+
+    <div class="quiz">
+        <img src="img/2020.png" alt="dcb">
+        <form onsubmit="return quizform()" method="post">
+            <label for="ans">
+                <h1>ポテトの揚げる時間はどのくらいかな？？</h1>
+            </label>
+            <br>
+            <select name="ans" id="ans" class="form-control">
+                <option value="">選択してください</option>
+                <option value="1">1分</option>
+                <option value="2">1分30秒</option>
+                <option value="3">2分</option>
+                <option value="4">2分30秒</option>
+                <option value="5">2分45秒</option>
+                <option value="6">2分55秒</option>
+                <option value="7">4分</option>
+                <option value="8">4分30秒</option>
+                <option value="9">5分</option>
+
+
+            </select>
+            <button type="submit">送信する</button>
+
+        </form>
+    </div>
+
+
+
+
+
+    <script>
+        function quizform() {
+            // 問題の回答を受け取るメソッドgetElementByid
+            var a = document.getElementById("ans").value;
+            if (a === "6") {
+                window.location.href = "practice3.html";
+                // return true;
+            } else {
+                window.location.href = "false2.html";
+            }
+            return false;
+        }
+    </script>
+</body>
+
+</html>
